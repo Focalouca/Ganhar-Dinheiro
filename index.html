@@ -5,41 +5,41 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Ajude o Kaique</title>
 
-<style>
+<link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
 <div class="card">
 
-<h1>💚 Ajude o Kaique</h1>
+    <h1>💚 Ajude o Kaique</h1>
 
-<p>Clique no botão abaixo para copiar o código Pix.</p>
+    <p>Clique no botão abaixo para copiar o código Pix.</p>
 
-<div class="qr">
-    <img src="imagem/qrcode.jpeg" alt="imagem">
-</div>
+    <div class="qr">
+        <!-- QR CODE EXTERNO (coloque seu link aqui) -->
+        <img src="https://seusite.com/seu-qrcode.png" alt="QR Code Pix">
+    </div>
 
-<button onclick="copiarPix()">
-📋 Copiar código Pix
-</button>
+    <button onclick="copiarPix()">
+        📋 Copiar código Pix
+    </button>
 
 </div>
 
 <script>
-// Substitua pelo seu código Pix Copia e Cola
+// Seu Pix Copia e Cola
 const codigoPix = "pkaique926@gmail.com";
 
 async function copiarPix() {
     try {
         await navigator.clipboard.writeText(codigoPix);
         alert("Código Pix copiado!");
-    } catch {
+    } catch (err) {
         alert("Não foi possível copiar o código.");
     }
 }
 </script>
-
-    </style>
 
 </body>
 </html>
